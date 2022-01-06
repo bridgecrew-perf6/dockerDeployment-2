@@ -3,6 +3,7 @@ version: '3'
 services:
   backend:
     build:
+      context: .
       dockerfile: backend/Dockerfile
     image: carlosdonado/kubesample_backend
     env_file: .env
