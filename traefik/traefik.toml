@@ -1,3 +1,6 @@
+[api]
+insecure = true
+
 [entryPoints]
   [entryPoints.web]
     address = ":80"
