@@ -12,6 +12,7 @@ services:
       - traefik.http.routers.app-http.rule=Host(`52.182.160.151`)
       - traefik.http.routers.app-http.tls=true
       - traefik.http.routers.app-http.tls.certresolver=letsencrypt
+      - traefik.http.services.my_custom_image.loadbalancer.server.port=80
 
   traefik:
     image: traefik:v2.3
