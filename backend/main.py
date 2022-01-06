@@ -6,7 +6,7 @@ import uvicorn
 from backend.settings import settings
 
 
-app = FastAPI(docs_url='/api/v1/docs', openapi_url="/api/v1/openapi.json")
+app = FastAPI()
 app.add_middleware(SessionMiddleware, secret_key=settings.ssh_key)
 
 # Requires environment variables to be set up
