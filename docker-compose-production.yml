@@ -13,6 +13,7 @@ services:
       - traefik.http.routers.app-http.tls=true
       - traefik.http.routers.app-http.tls.certresolver=letsencrypt
       - traefik.http.services.backend.loadbalancer.server.port=8000
+      - traefik.http.routers.app-http.rule=PathPrefix(`/api/v1`)
 
   traefik:
     image: traefik:v2.3
