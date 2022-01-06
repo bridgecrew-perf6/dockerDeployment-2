@@ -6,7 +6,7 @@ import uvicorn
 from backend.settings import settings
 
 
-app = FastAPI()
+app = FastAPI(root_path='/api/v1')
 app.add_middleware(SessionMiddleware, secret_key=settings.ssh_key)
 
 # Requires environment variables to be set up
@@ -17,7 +17,7 @@ app.include_router(msal_auth.router)
 
 @app.get('/')
 def root():
-    return 'Lina te amo'
+    return 'hola mundo'
 
 
 @app.get("/users/me", response_model=UserInfo, response_model_exclude_none=True, response_model_by_alias=False)
