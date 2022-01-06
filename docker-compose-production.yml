@@ -9,7 +9,7 @@ services:
     env_file: .env
     labels:
       - traefik.enable=true
-      - traefik.http.routers.app-http.rule=Host(`carlosdonado.com`)
+      - traefik.http.routers.app-http.rule=Host(`ssl.carlosdonado.com`)
       - traefik.http.routers.app-http.tls=true
       - traefik.http.routers.app-http.tls.certresolver=letsencrypt
       - traefik.http.services.backend.loadbalancer.server.port=8000
