@@ -17,7 +17,7 @@ app.include_router(msal_auth.router)
 
 @app.get('/')
 def root():
-    return 'hello world'
+    return 'Lina te amo'
 
 
 @app.get("/users/me", response_model=UserInfo, response_model_exclude_none=True, response_model_by_alias=False)
