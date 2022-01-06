@@ -22,6 +22,6 @@ dashboard = true
 
 [certificatesResolvers.letsencrypt.acme]
   email = "cf.donado@hotmail.com"
-  storage= "acme.json"
+  storage= "/certificates/acme.json"
   [certificatesResolvers.letsencrypt.acme.httpChallenge]
     entryPoint = "web"
