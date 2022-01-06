@@ -7,3 +7,5 @@ services:
       dockerfile: backend/Dockerfile
     image: carlosdonado/kubesample_backend
     env_file: .env
+    ports:
+      - 80:80
